@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Syne+Mono&display=swap');
+:root {
+    --bg-sidebar: #5674dd;
+    --text-color: #aeb0fb;
+    --text-hover: #ffffff;
+    --accent-color: #45bff3;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+   font-family: "Syne Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f6f9;
+    min-height: 100vh;
+}
+
+/* Sidebar Estilização */
+.sidebar {
+    width: 280px;
+    background-color: var(--bg-sidebar);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: var(--transition);
+    z-index: 99;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-header h2 {
+    font-size: 20px;
+    color: white;
+}
+
+/* Links do Menu */
+.sidebar {
+    list-style: none;
+    padding: 20px 0;
+    flex-grow: 1;
+}
+
+.sidebar li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 28px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 20px;
+    transition: var(--transition);
+    border-left: 5px solid transparent;
+}
+
+.sidebarli a:hover,
+.sidebar li a.active {
+    color: var(--text-hover);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left-color: var(--accent-color);
+}
+
+.sidebar li a i {
+    font-size: 16px;
+    width: 10px;
+    text-align: center;
+}
+
+/* Conteúdo Principal */
+.container {
+    margin-left: 280px;
+    padding: 70px;
+    flex-grow: 1;
+    transition: var(--transition);
+}
+
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -280px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .container {
+        margin-left: 0;
+        padding: 80px 20px 20px 20px;
+    }
+}
