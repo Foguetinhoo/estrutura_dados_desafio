@@ -1,3 +1,3 @@
 # estrutura_dados_desafio
-<h2>Desafios da matéria de <h6>Estrutura de Dados</h6>, <span>3º semestre Análise de dados</span>
-FATEC de Praia Grande </h2>
+<p>Desafios da matéria de <span>Estrutura de Dados 3º semestre Análise de dados</span>
+da FATEC de Praia Grande </p>
