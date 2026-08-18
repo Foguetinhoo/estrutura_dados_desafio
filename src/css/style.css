@@ -18,14 +18,34 @@
   font-weight: 400;
   font-style: normal;
 }
-
+input{
+    background: none;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 2px solid rgb(19, 20, 20);
+}
+input:focus{
+    border: 2px solid rgb(10, 150, 110);
+    color: rgb(7, 7, 7);
+    transition: all .6s ease-in-out;
+}
+button:disa{
+    cursor: crosshair;
+}
 body {
     display: flex;
     flex-direction: column;
-    background-color: #f3f6f9;
+    background-color:#e2ebef;
     min-height: 100vh;
 }
-
+.success{
+    color: rgb(10, 150, 110);
+}
+.error{
+    font-size: 30px;
+    color: #f40606;
+}
 /* Sidebar Estilização */
 .sidebar {
     width: 280px;
@@ -95,8 +115,75 @@ body {
     transition: var(--transition);
 }
 
+.container >div{
+    display: none;
+    font-size: 18px;
+}
+.container > div.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 10px;
+    width: 600px;
+    height: 400px;
+    background:#d5e0e6;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
+    animation: lazin .5s ease-in;
+       font-size: 18px;
+}
+  
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+ button{
+    margin-top: 10px;
+    padding: 5px;
+}
+button:hover{
+    cursor: pointer;
+}
+button:disabled:hover{
+    cursor: not-allowed;
+}
+.footer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 
-
+}
+.footer .result{
+    font-size: 50px;
+}
+button{
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    border:0;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+option  i{
+    background-color: #45bff3;
+}
+@keyframes lazin {
+    from{
+        opacity: 0.5;
+        transform: translate(-80px);
+    }
+    to{  
+        opacity: .6;
+    }
+}
 @media (max-width: 768px) {
     .sidebar {
         left: -280px;
