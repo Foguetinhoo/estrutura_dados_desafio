@@ -46,6 +46,9 @@ body {
     font-size: 30px;
     color: #f40606;
 }
+.warning{
+   color: #f57904;
+}
 /* Sidebar Estilização */
 .sidebar {
     width: 280px;
@@ -158,8 +161,17 @@ button:disabled:hover{
     gap: 20px;
 
 }
-.footer .result{
-    font-size: 50px;
+.footer span:nth-child(2){
+    font-size: 19px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.bld{
+    font-weight: 800;
+    font-style: italic;
+    color: rgb(5, 43, 114);
 }
 button{
     font-size: 18px;
