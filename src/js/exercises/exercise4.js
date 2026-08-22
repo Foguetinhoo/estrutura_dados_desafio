@@ -1,17 +1,19 @@
 import { changeClass, disabledButton, validateInput } from "../functions.js";
 function Exercise4(){
-const number = document.querySelector(".number");
+    const number = document.querySelector(".number2");
     const result = document.querySelector("#result4");
-    const button = document.querySelector("#add_vetor2");
+    const button = document.querySelector("#add_vetor2") ;
     disabledButton(button);
+
     number.addEventListener("input", () => validateInput([number], button));
     changeClass(result, "success")
     const arr = []
     button.addEventListener("click", (e) => {
-        e.preventDefault(); // Evita recarregar a página se for um botão dentro de <form>
+        e.preventDefault();     
 
         const inpt = Number(number.value)
         arr.push(inpt);
+
         result.innerHTML += `${inpt} `
         number.value = "";
         disabledButton(button);
@@ -19,7 +21,6 @@ const number = document.querySelector(".number");
         if (arr.length ===10) {
             number.disabled = true;
             disabledButton(button);
-
             let maior = arr[0];
             let menor = arr[0];
             let posMai = 0;

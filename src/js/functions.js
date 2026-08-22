@@ -9,6 +9,7 @@ function disabledButton(buttons, option = true) {
   }
 }
 function validateInput(element, buttons) {
+  
   let val = 0;
   if (element.length > 0) {
     element.forEach((input) => {

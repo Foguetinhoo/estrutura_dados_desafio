@@ -179,6 +179,13 @@ button{
     background-color: var(--accent-color);
     border:0;
 }
+.search{
+    display: none   ;
+}
+.discob{
+   display: flex;
+   margin-top: 10px;
+}
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
